@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { TripList } from "../recordOfTrips/tripList"
 import "./bayItems.css" 
 import { getBayItems, findItem, resetItem } from "../../managers/BayItemsManager"
 
@@ -27,6 +28,13 @@ export const BayItemsList = () => {
     }
 
     return <>
+        <section className="bayItems-page--header">
+        <div>
+            <h1>Can you find these Chesapeake Bay Related Things?</h1>
+            <h4>When you spot on on your trip, click 'Found it!'</h4>
+        </div>
+        <div><TripList/></div>
+        </section>
         
         <div className="bayItems-page--container">
 
@@ -40,7 +48,7 @@ export const BayItemsList = () => {
                     <div>
                         <section className="bayItem" key={`bayItem--${bayItem.id}`}>
                             <img className="bayItem--photo"src={bayItem.found_img} alt={`Image of ${bayItem.name}`}/>
-                            <h5>{bayItem.name}</h5>
+                            <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleReset(bayItem.id) } }>reset</button>
                         </section>
                     </div>
@@ -48,7 +56,7 @@ export const BayItemsList = () => {
                     <div>
                         <section className="bayItem" key={`bayItem--${bayItem.id}`}>
                             <img className="bayItem--photo"src={bayItem.default_img} alt={`Image of ${bayItem.name}`}/>
-                            <h5>{bayItem.name}</h5>
+                            <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleFind(bayItem.id) } }>Found it!</button>
                         </section>
                     </div> } </>
