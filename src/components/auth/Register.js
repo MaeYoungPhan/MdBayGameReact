@@ -32,7 +32,7 @@ export const Register = ({ setToken }) => {
         if ("token" in res) {
           //sets registered user into local storage and sets Token state to the embedded token object returned from the api
           setToken(res.token)
-          localStorage.setItem("rare_token", res.token)
+          localStorage.setItem("gamer_token", res.token)
           navigate("/")
         }
       })
