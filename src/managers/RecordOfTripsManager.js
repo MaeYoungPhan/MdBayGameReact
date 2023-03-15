@@ -1,9 +1,9 @@
 export const getTrips = () => {
-    return fetch("http://localhost:8000/recordoftrips"), {
+    return fetch("http://localhost:8000/recordoftrips", {
         headers: {
-        Authorization: `Token ${localStorage.getItem("gamer_token")}`,
-        },
-    }
+        Authorization: `Token ${localStorage.getItem("gamer_token")}`
+        }
+    })
         .then(res => res.json())
     }
 
@@ -24,7 +24,7 @@ export const addNewTrip = (trip) => {
         "Authorization": `Token ${localStorage.getItem("gamer_token")}`
     
         },
-        body: JSON.stringify(post),
+        body: JSON.stringify(trip),
     })
     }
 

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { ApplicationViews } from "./views/ApplicationViews"
 import { NavBar } from "./components/nav/NavBar"
+import "./BayGame.css"
 
 
 //Function to set token state, Returns render NavBar and Application Views, passes token and setToken as props
