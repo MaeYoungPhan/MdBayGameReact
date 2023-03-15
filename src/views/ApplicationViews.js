@@ -4,6 +4,7 @@ import { Register } from "../components/auth/Register"
 import { Authorized } from "./Authorized"
 import { BayItemsList } from "../components/bayItems/bayList"
 import { TripForm } from "../components/recordOfTrips/addTrip"
+import { EditTripForm } from "../components/recordOfTrips/editTrip"
 
 
 // responsible for routing users to specific views depending on URL paths
@@ -19,7 +20,7 @@ export const ApplicationViews = ({ token, setToken }) => {
         <Route path="/bayitems" element={<BayItemsList setToken={setToken} />} />
         <Route path="/recordoftrips">
         <Route path="/recordoftrips/new" element={<TripForm token={token} />} />
-        {/* <Route path="/recordoftrips/edit/:tripId" element={<EditTrip token={token} />} /> */}
+        <Route path="/recordoftrips/edit/:tripId" element={<EditTripForm token={token} />} />
         </Route>
         </Route>
       </Routes>
