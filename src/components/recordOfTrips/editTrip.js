@@ -58,7 +58,7 @@ export const EditTripForm = () => {
                 <div className="form-group">
                     <label htmlFor="number_found">Number of Scavenger Hunt Items Found: </label>
                     <input type="text" name="number_found" required autoFocus className="form-control"
-                        defaultValue={currentTrip.number_found}
+                        value={currentTrip.number_found}
                         onChange={(evt) => {const copy = {...currentTrip}
                         copy.number_found = parseInt(evt.target.value)
                         setCurrentTrip(copy)}}
@@ -67,7 +67,7 @@ export const EditTripForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                <label className="label">Occassion:</label>
+                <label className="label">Occasion:</label>
                     <select name="occasion" required className="form-control" 
                     // set current value to occasionId int. 
                     value={currentTrip.occasionId} onChange={(evt) => {const copy = {...currentTrip}
