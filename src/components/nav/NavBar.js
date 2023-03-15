@@ -58,6 +58,9 @@ export const NavBar = ({ token, setToken }) => {
                 <Link to="/" className="navbar-item">
                   Home
                 </Link>
+                <Link to="/bayitems" className="button is-rounded is-outlined">
+                      Scavenger Hunt
+                </Link>
               </>
             ) : (
               ""
