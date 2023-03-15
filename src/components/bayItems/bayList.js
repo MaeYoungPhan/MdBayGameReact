@@ -1,21 +1,30 @@
 import { useEffect, useState } from "react"
-import { BayItem } from "./BayItem"
 import "./bayItems.css" 
-import { getBayItems } from "../../managers/BayItemsManager"
+import { getBayItems, findItem, resetItem } from "../../managers/BayItemsManager"
 
 
 export const BayItemsList = () => {
     const [bayItems, setBayItems] = useState([])
 
-    useEffect(
-        () => {
-            getBayItems()
-            .then( (bayItemsArray) => {
-                setBayItems(bayItemsArray)
+    const getAllBayItems = () => {
+        getBayItems().then(data => setBayItems(data))
+    }
+
+    useEffect(() => {
+        getAllBayItems()
+    }, [])
+
+    const handleFind = (id) => {
+        findItem(id).then(() => {
+            {getAllBayItems()}
             }) 
-        },
-        []
-    )
+    }
+
+    const handleReset = (id) => {
+        resetItem(id).then(() => {
+            {getAllBayItems()}
+            }) 
+    }
 
     return <>
         
@@ -24,7 +33,27 @@ export const BayItemsList = () => {
         <article className="bayItems">
             {
                 bayItems.map(
-                    (bayItem) => <BayItem bayItem={bayItem} />)
+                    (bayItem) => {
+                    return <>
+                    {
+                    bayItem.found ?
+                    <div>
+                        <section className="bayItem" key={`bayItem--${bayItem.id}`}>
+                            <img className="bayItem--photo"src={bayItem.found_img} alt={`Image of ${bayItem.name}`}/>
+                            <h5>{bayItem.name}</h5>
+                            <button onClick={ () => { handleReset(bayItem.id) } }>reset</button>
+                        </section>
+                    </div>
+                    :
+                    <div>
+                        <section className="bayItem" key={`bayItem--${bayItem.id}`}>
+                            <img className="bayItem--photo"src={bayItem.default_img} alt={`Image of ${bayItem.name}`}/>
+                            <h5>{bayItem.name}</h5>
+                            <button onClick={ () => { handleFind(bayItem.id) } }>Found it!</button>
+                        </section>
+                    </div> } </>
+                    }
+                    )
             }
         </article>
         </div>
