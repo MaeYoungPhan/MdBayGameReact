@@ -40,7 +40,7 @@ export const NavBar = ({ token, setToken }) => {
           className="navbar-burger"
           aria-label="menu"
           aria-expanded="true"
-          data-target="navbarBasicExamplef"
+          data-target="navbarBasicExample"
           onClick={showMobileNavbar}
           ref={hamburger}
         >
