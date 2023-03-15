@@ -3,7 +3,6 @@ import { Login } from "../components/auth/Login"
 import { Register } from "../components/auth/Register"
 import { Authorized } from "./Authorized"
 import { BayItemsList } from "../components/bayItems/bayList"
-// import { BayItem } from "../components/bayItems/bayItem"
 
 
 // responsible for routing users to specific views depending on URL paths
@@ -16,7 +15,9 @@ export const ApplicationViews = ({ token, setToken }) => {
         <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/register" element={<Register setToken={setToken} />} />
         <Route path="/">
-        <Route path="/bayitems" element={<BayItemsList setToken={setToken} />} />
+        <Route path="/bayitems" element={<BayItemsList setToken={setToken} />} /><Route path="/categories">
+        <Route path="/recordoftrips/edit/:tripId" element={<EditTrip token={token} />} />
+        </Route>
         </Route>
       </Routes>
     </>

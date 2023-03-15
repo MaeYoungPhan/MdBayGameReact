@@ -41,7 +41,7 @@ export const TripList = (props) => {
                             <p className="trip--number">{trip.number_found}</p>
                             <BsFillPencilFill
                             onClick={() => {
-                                navigate({ pathname: `edit/${trip.id}` })
+                                navigate({ pathname: `/recordoftrips/edit/${trip.id}` })
                                 }}/>
                             <BsFillTrashFill
                             onClick={() => {
