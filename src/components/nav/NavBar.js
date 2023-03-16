@@ -54,9 +54,8 @@ export const NavBar = ({ token, setToken }) => {
           {
             token ? 
             (<>
-                <span className="padding">/</span>
-                <Link to="/" className="navbar-item">
-                  Home
+                <Link to="/howtoplay" className="navbar-item">
+                  How To Play
                 </Link>
                 <Link to="/bayitems" className="button is-rounded is-outlined">
                       Scavenger Hunt

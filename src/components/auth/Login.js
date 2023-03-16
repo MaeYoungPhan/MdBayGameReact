@@ -28,7 +28,7 @@ export const Login = ({ setToken }) => {
         //Sets the user into local storage and navigates to home
         setToken(res.token)
         localStorage.setItem("gamer_token", res.token)
-        navigate("/")
+        navigate("/bayitems")
       }
       else {
         //Used to generate a string on the form "Username or password not valid"
