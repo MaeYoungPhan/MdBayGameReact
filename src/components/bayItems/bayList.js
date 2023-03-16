@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { TripList } from "../recordOfTrips/tripList"
 import "./bayItems.css" 
 import { getBayItems, findItem, resetItem } from "../../managers/BayItemsManager"
+import { Row, Col, Image, Button } from 'react-bootstrap';
 
 
 export const BayItemsList = () => {
@@ -33,12 +34,12 @@ export const BayItemsList = () => {
             <h1>Can you find these Chesapeake Bay Related Things?</h1>
             <h4>When you spot on on your trip, click 'Found it!'</h4>
         </div>
-        <div><TripList/></div>
+        <TripList/>
         </section>
         
         <div className="bayItems-page--container">
 
-        <article className="bayItems">
+        <article className="grid-container--bayItems">
             {
                 bayItems.map(
                     (bayItem) => {
@@ -46,7 +47,7 @@ export const BayItemsList = () => {
                     {
                     bayItem.found ?
                     <div>
-                        <section className="bayItem" key={`bayItem--${bayItem.id}`}>
+                        <section className="grid--bayItem" key={`bayItem--${bayItem.id}`}>
                             <img className="bayItem--photo"src={bayItem.found_img} alt={`Image of ${bayItem.name}`}/>
                             <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleReset(bayItem.id) } }>reset</button>
@@ -54,7 +55,7 @@ export const BayItemsList = () => {
                     </div>
                     :
                     <div>
-                        <section className="bayItem" key={`bayItem--${bayItem.id}`}>
+                        <section className="grid--bayItem" key={`bayItem--${bayItem.id}`}>
                             <img className="bayItem--photo"src={bayItem.default_img} alt={`Image of ${bayItem.name}`}/>
                             <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleFind(bayItem.id) } }>Found it!</button>
