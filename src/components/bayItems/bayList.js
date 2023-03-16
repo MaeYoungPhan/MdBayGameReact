@@ -30,11 +30,11 @@ export const BayItemsList = () => {
 
     return <>
         <section className="bayItems-page--header">
+        <TripList/>
         <div>
             <h1>Can you find these Chesapeake Bay Related Things?</h1>
             <h4>When you spot on on your trip, click 'Found it!'</h4>
         </div>
-        <TripList/>
         </section>
         
         <div className="bayItems-page--container">
