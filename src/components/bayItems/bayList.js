@@ -30,10 +30,10 @@ export const BayItemsList = () => {
 
     return <>
         <section className="bayItems-page--header">
-        <TripList/>
-        <div>
-            <h1>Can you find these Chesapeake Bay Related Things?</h1>
-            <h4>When you spot on on your trip, click 'Found it!'</h4>
+        <div className="tripsList--container"><TripList/></div>
+        <div className="bayItems-header--container">
+            <h1 className="bayItems--title">Can you find these Chesapeake Bay Related Things?</h1>
+            <h4 className="bayItems--subtitle">When you spot on on your trip, click 'Found it!'</h4>
         </div>
         </section>
         
@@ -46,16 +46,16 @@ export const BayItemsList = () => {
                     return <>
                     {
                     bayItem.found ?
-                    <div>
-                        <section className="grid--bayItem" key={`bayItem--${bayItem.id}`}>
+                    <div key={`defaultItem--${bayItem.id}`}>
+                        <section className="grid--bayItem">
                             <img className="bayItem--photo"src={bayItem.found_img} alt={`Image of ${bayItem.name}`}/>
                             <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleReset(bayItem.id) } }>reset</button>
                         </section>
                     </div>
                     :
-                    <div>
-                        <section className="grid--bayItem" key={`bayItem--${bayItem.id}`}>
+                    <div key={`foundItem--${bayItem.id}`}>
+                        <section className="grid--bayItem">
                             <img className="bayItem--photo"src={bayItem.default_img} alt={`Image of ${bayItem.name}`}/>
                             <h3 className="bayItem--name">{bayItem.name}</h3>
                             <button onClick={ () => { handleFind(bayItem.id) } }>Found it!</button>

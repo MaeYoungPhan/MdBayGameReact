@@ -12,7 +12,7 @@
     justify-content: center;
     /* background-color: #eaec67;
     border: 1px solid rgba(0, 0, 0, 0.8); */
-    margin: 5px;
+    margin: 0 5px;
     padding: 20px;
     font-size: .75rem;
     text-align: center;
@@ -27,11 +27,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 3rem;
 }
 
 .tripsList--container {
     display: grid;
-    width: 450px;
+    align-self: end;
+    width: 415px;
+    border: 1px solid #242423;
+}
+
+.bayItems-header--container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bayItems--title {
+    margin-bottom: 0;
+}
+
+.bayItems--subtitle {
+    margin-bottom: 0;
 }
 
 .trips--addbtn {
@@ -39,6 +55,7 @@
     justify-content: flex-end;
     align-items: center;
     margin: 2px;
+    padding: 2px;
 }
 
 .trip-columns {

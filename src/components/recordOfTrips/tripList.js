@@ -51,8 +51,8 @@ export const TripList = (props) => {
                         </section>
                     })
                 } */}
-            <Table striped bordered hover>
-            <caption>Record of Trips</caption>
+            <Table className="trip--table" striped bordered hover>
+            <caption><b>Record of Trips</b></caption>
   <thead>
     <tr className="trip-columns">
       <th>Date</th>
