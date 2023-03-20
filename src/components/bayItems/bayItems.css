@@ -10,12 +10,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #eaec67;
-    border: 1px solid rgba(0, 0, 0, 0.8); */
     margin: 0 5px;
     padding: 20px;
     font-size: .75rem;
     text-align: center;
+}
+
+.hunt {
+    border: .25rem solid #242423;
+    border-radius: 2rem;
+    margin: 1rem;
 }
 
 .bayItem--photo {
@@ -27,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 3rem;
+    margin: 1rem 3rem;
 }
 
 .tripsList--container {

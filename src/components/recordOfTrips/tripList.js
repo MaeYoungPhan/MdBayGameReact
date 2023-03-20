@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { useNavigate, Link } from 'react-router-dom'
-import { getTrips, editTrip, deleteTrip } from "../../managers/RecordOfTripsManager"
+import { useNavigate } from 'react-router-dom'
+import { getTrips, deleteTrip } from "../../managers/RecordOfTripsManager"
 import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs"
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import { Table, Button } from 'react-bootstrap';

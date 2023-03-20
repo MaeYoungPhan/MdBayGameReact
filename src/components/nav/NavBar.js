@@ -1,103 +1,56 @@
-import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from 'react-icons/fa'
+import olBlueLogo from "../howToPlay/images/olBlueLogo.png"
 import "./NavBar.css";
 
-// Creates and exports NavBar component
-// uses Props in the argument defined in Rare.js
-export const NavBar = ({ token, setToken }) => {
-  //defines navigate variable to use useNavigate hook
-  const navigate = useNavigate();
-  /*
-  •useRefs() hooks are used to reference previous state 
-  •Defines variable where useRef is set to an initial value of null
-  */
-  const navbar = useRef();
-  /*
-  the mobile icon used for opening a menu
-  hidden until user adjusts width
-  */
-  const hamburger = useRef();
-  /*
-  •Toggles mobile hamburger icon to active and opens on click (JSX)
-  */
-  const showMobileNavbar = () => {
-    hamburger.current.classList.toggle("is-active");
-    navbar.current.classList.toggle("is-active");
-  };
-  return (
-    <nav
-      className="navbar"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div className="navbar-brand">
-        <a className="navbar-item" href="/">
-          {/* <img src={Logo} height="3rem" alt="Rare Logo" />{" "} */}
-          <h1 className="Header">The Maryland Bay Game</h1>
-        </a>
-        <a
-          role="button"
-          className="navbar-burger"
-          aria-label="menu"
-          aria-expanded="true"
-          data-target="navbarBasicExample"
-          onClick={showMobileNavbar}
-          ref={hamburger}
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div className="navbar-menu" ref={navbar}>
-        <div className="navbar-start">
-          {
-            token ? 
-            (<>
-                <Link to="/howtoplay" className="navbar-item">
-                  How To Play
-                </Link>
-                <Link to="/bayitems" className="button is-rounded is-outlined">
-                      Scavenger Hunt
-                </Link>
-              </>
-            ) : (
-              ""
-            )
-          }
-        </div>
-
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-              {
-                // This ternary statement checks if the current user is logged in
-                // If true, a logout button will appear and will route back to the "/login" path when clicked
-                token ? (
-                  <button
-                    className="button is-rounded"
-                    onClick={() => {
-                      setToken("");
-                      navigate("/login");
-                    }}
-                  >
-                    Logout
-                  </button>
-                ) : (
-                  <>
-                    <Link to="/register" className="button is-rounded is-link">
-                      Register
-                    </Link>
-                    <Link to="/login" className="button is-rounded is-outlined">
-                      Login
-                    </Link>
-                  </>
-                )
+export const NavBar = ({toggle, setToggle, token, setToken}) => {
+    
+  return <>
+      <ul className='navbar'>
+          <li onClick={()=>{setToggle(true)}}>
+              <p className="navbar-header">
+                  <img src={olBlueLogo} alt="Ol' Blue" className="navbar-logo" /> The Maryland Bay Game
+              </p>
+          </li>
+          <li onClick={()=>{setToggle(!toggle)}}>
+              {toggle?
+              <FaBars className="navbar-bars"/>
+              :
+              <FaTimes className="navbar-bars"/>
               }
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
+          </li>
+      </ul>
+      <ul 
+      className={`navbar2 ${toggle?"":"toggle"}`}
+      onClick={()=>{setToggle(true)}}>
+              <li className="navbar-listitem">
+              <Link to="/howtoplay" className="navbar2-links">
+            How To Play </Link>
+              </li>
+              <li className="navbar-listitem">
+              <Link to="/bayitems" className="navbar2-links">
+          Scavenger Hunt</Link>
+              </li>
+              {
+                token ? (
+                  <li
+                  className="navbar-listitem">
+                      <Link onClick={()=>{setToken("")}} to="/login">
+                          Logout
+                      </Link>
+                  </li>
+        ) : (
+          <>
+          <li
+                  className="navbar-listitem">
+            <Link to="/register" className="button">
+                      Register</Link></li>
+          <li
+                  className="navbar-listitem">
+            <Link to="/login" className="button">Login </Link></li>
+          </>
+        )
+      }
+      </ul>
+      </>
+}

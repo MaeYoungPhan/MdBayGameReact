@@ -29,6 +29,7 @@ export const BayItemsList = () => {
     }
 
     return <>
+        <section className="hunt">
         <section className="bayItems-page--header">
         <div className="tripsList--container"><TripList/></div>
         <div className="bayItems-header--container">
@@ -66,6 +67,7 @@ export const BayItemsList = () => {
             }
         </article>
         </div>
+        </section>
     </>
 
 }
