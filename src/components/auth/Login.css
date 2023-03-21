@@ -1,0 +1,45 @@
+.background-image {
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 90%;
+}
+
+.content {
+    position: fixed;
+    background: #f3f5f792;
+    color: #242423;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.login--form {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login--title {
+    font-size: xx-large;
+    margin: 1rem;
+}
+
+.login--subtitle {
+    font-size: larger;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.field {
+    margin: .5rem;
+}
+
+.control {
+    margin-top: .5rem;
+}

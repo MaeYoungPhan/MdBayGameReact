@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from 'react-icons/fa'
 import olBlueLogo from "../howToPlay/images/olBlueLogo.png"
 import "./NavBar.css";
@@ -23,6 +23,9 @@ export const NavBar = ({toggle, setToggle, token, setToken}) => {
       <ul 
       className={`navbar2 ${toggle?"":"toggle"}`}
       onClick={()=>{setToggle(true)}}>
+        {
+        token ? (
+          <>
               <li className="navbar-listitem how">
               <Link to="/howtoplay" className="navbar2-links">
             How To Play </Link>
@@ -35,14 +38,13 @@ export const NavBar = ({toggle, setToggle, token, setToken}) => {
               <Link to="/riversandstreams" className="navbar2-links">
           Rivers and Streams</Link>
               </li>
-              {
-                token ? (
                   <li
                   className="navbar-listitem">
                       <Link onClick={()=>{setToken("")}} to="/login">
                           Logout
                       </Link>
                   </li>
+                  </>
         ) : (
           <>
           <li

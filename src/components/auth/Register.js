@@ -2,6 +2,8 @@ import { useRef } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { registerUser } from "../../managers/AuthManager"
+import bridge from "./images/BayBridge_postcard2.jpeg"
+import "./Login.css"
 
 export const Register = ({ setToken }) => {
   //state variables representing the properties of the User Class
@@ -16,9 +18,9 @@ export const Register = ({ setToken }) => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    //confirms password and verifyPassword are the same value and data type
+
     if (password.current.value === verifyPassword.current.value) {
-      //initializes newUser to meet the requirements of the User class for POST request
+
       const newUser = {
         username: username.current.value,
         first_name: firstName.current.value,
@@ -26,28 +28,28 @@ export const Register = ({ setToken }) => {
         email: email.current.value,
         password: password.current.value
       }
-      //POSTs the user to the Register table
+
       registerUser(newUser).then((res) => {
-        //Tests both a javascript string "valid" and the property "valid" on the response. Does the register table add self.valid: "valid" property? Does it also add self.token to return the required keys/values for setToken?
+
         if ("token" in res) {
-          //sets registered user into local storage and sets Token state to the embedded token object returned from the api
+
           setToken(res.token)
           localStorage.setItem("gamer_token", res.token)
           navigate("/howtoplay")
         }
       })
     } else {
-      //renders a modal, I assume?
       passwordDialog.current.showModal()
     }
   }
 
   return (
-    <section className="columns is-centered">
-      {/* Form that invokes handleRegister() when submitted */}
-      <form className="column is-two-thirds" onSubmit={handleRegister}>
-        <h1 className="title">Welcome to the Maryland Bay Game!</h1>
-        <p className="subtitle">Create an account to play</p>
+    <section className="login--container">
+      <img src={bridge} className="background-image"/>
+      <div className="content">
+      <form className="login--form" onSubmit={handleRegister}>
+        <h1 className="login--title">Welcome to the Maryland Bay Game!</h1>
+        <p className="login--subtitle">Create an account to play</p>
         <div className="field">
           <label className="label">First Name</label>
           <div className="control">
@@ -78,9 +80,7 @@ export const Register = ({ setToken }) => {
 
         <div className="field">
           <label className="label">Password</label>
-          <div className="field-body">
-            <div className="field">
-              <p className="control is-expanded">
+              <p className="control">
                 <input
                   className="input"
                   type="password"
@@ -91,7 +91,7 @@ export const Register = ({ setToken }) => {
             </div>
 
             <div className="field">
-              <p className="control is-expanded">
+              <p className="control">
                 <input
                   className="input"
                   type="password"
@@ -100,22 +100,19 @@ export const Register = ({ setToken }) => {
                 />
               </p>
             </div>
-          </div>
-        </div>
 
-        <div className="field is-grouped">
           <div className="control">
-            <button className="button is-link is-rounded" type="submit">
+            <button className="button" type="submit">
               Register
             </button>
           </div>
           <div className="control">
-            <Link to="/login" className="button is-link is-danger is-rounded">
+            <Link to="/login" className="register-link">
               Cancel
             </Link>
           </div>
-        </div>
       </form>
+      </div>
     </section>
   )
 }

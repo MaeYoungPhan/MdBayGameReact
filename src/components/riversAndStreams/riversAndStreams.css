@@ -1,6 +1,5 @@
 .water {
     display: flex;
-    /* flex-basis: 40%; */
 }
 
 .rivers-page--header {
@@ -36,8 +35,12 @@
 }
 
 .map {
-    height: 55rem;
+    height: 50rem;
     margin: 0 1rem;
     border: .2rem #242423 solid;
     border-radius: 2rem;
+}
+
+.river--list {
+    line-height: 3rem;
 }
