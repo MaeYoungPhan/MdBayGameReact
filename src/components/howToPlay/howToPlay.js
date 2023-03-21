@@ -10,7 +10,7 @@ export const HowToPlay = () => {
 					<div className="coverPage">
 					<div className="logo"><img className="olBlue" src={olBlueLogo}/></div>
 					<h2 className="md--title">The Maryland</h2>
-                    <h1 className="bay--title">Bay Game</h1>
+                    <h1 className="bay--title">BAY GAME</h1>
 					<p className="tagline">The Official Chesapeake Bay Activity App for Fun From the Bridge to the Beach</p>
 					<p className="governor">Governor Wes Moore</p>
                     <h5 className="credit">Adapted from the original 1997 Maryland Bay Game by Maegan Phan.</h5>
