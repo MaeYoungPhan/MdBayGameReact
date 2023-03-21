@@ -23,13 +23,17 @@ export const NavBar = ({toggle, setToggle, token, setToken}) => {
       <ul 
       className={`navbar2 ${toggle?"":"toggle"}`}
       onClick={()=>{setToggle(true)}}>
-              <li className="navbar-listitem">
+              <li className="navbar-listitem how">
               <Link to="/howtoplay" className="navbar2-links">
             How To Play </Link>
               </li>
               <li className="navbar-listitem">
               <Link to="/bayitems" className="navbar2-links">
           Scavenger Hunt</Link>
+              </li>
+              <li className="navbar-listitem">
+              <Link to="/riversandstreams" className="navbar2-links">
+          Rivers and Streams</Link>
               </li>
               {
                 token ? (

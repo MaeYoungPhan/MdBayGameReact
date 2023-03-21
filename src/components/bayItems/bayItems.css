@@ -1,7 +1,6 @@
 .grid-container--bayItems {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    /* background-color: #08316D; */
     padding: 10px;
 }
 
@@ -17,7 +16,7 @@
 }
 
 .hunt {
-    border: .25rem solid #242423;
+    border: .2rem solid #242423;
     border-radius: 2rem;
     margin: 1rem;
 }
