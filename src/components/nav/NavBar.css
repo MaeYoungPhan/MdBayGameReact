@@ -1,45 +1,71 @@
-.navbar { 
-    color: #ffffff; 
-    background-color: #131313;
- }
- 
- .navbar-menu img {
-    max-height: 3rem;
-    color: #ffffff; 
-    background-color: #131313;
- }
- 
- .navbar-brand, .navbar-item, .navbar-burger, .navbar-menu { 
-    font-size: 15px;
-    background-color: #131313;
- }
- 
- .navbar-item, .navbar-link { 
-    color: #cccccc;
-    background-color: #131313;
-    padding: 0px; 
- }
- 
- .navbar-item, .navbar-menu.is-active  { 
-    background-color: #131313; 
- }
- 
- .navbar-end { 
-    padding-right: 75px; 
- }
- 
- .navbar-burger { 
-    margin-right: 25px; 
- }
- 
- .padding { 
-    padding: 45px 10px; 
-    color: #3cffd0;
- }
- 
- .rareHeader { 
-    color: #ffffff;
-    font-weight: bolder; 
-    font-size: 25px; 
-    margin-left: 25px; 
- }
+@import url("../../index.css");
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6096ba;
+    list-style: none;
+    position: relative;
+    padding: 1rem;
+    transform: translateY(-15%);
+    z-index: 1000;
+    border-bottom: .2rem solid #242423;
+}
+
+.navbar-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: x-large;
+   font-weight: 600;
+   margin-left: 1rem;
+}
+
+.navbar-logo {
+    height: 4rem;
+}
+
+.navbar-bars {
+    color: #242423;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.navbar2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    transition: 500ms ease-in-out;
+    margin-top: 9.5rem;
+    margin-right: 1rem;
+    padding: 2rem, 0;
+    border-radius: 0 0 0 15px;
+    list-style: none;
+    background-color: #F3F5F7;
+    border-left: #242423 solid .2rem;
+    border-bottom: #242423 solid .2rem;
+    transform: translateY(-110%);
+    z-index: 999;
+    transition: 500ms cubic-bezier(0.57, -0.6, 0.32, 1.27);
+}
+
+.navbar-listitem {
+    padding: .3rem .5rem .3rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.how {
+    margin-top: .5rem;
+}
+
+.navbar2.toggle {
+    display: hidden;
+    transform: translateY(calc(0% - 20px));
+}

@@ -12,11 +12,13 @@ textarea {
   line-height: 1.5;
 }
 
-button{
-  color: #242423;
+button {
+  background-color: #274c77;
   font-family: "Comic Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  border-radius: 1rem;
+  color: #e7ecef;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,9 +31,12 @@ p, div, footer {
   font-family: "Comic Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 8px;
 }
 
 .title--main {
   margin-block-end: 0;
+}
+
+body {
+  background-color: #F3F5F7;
 }

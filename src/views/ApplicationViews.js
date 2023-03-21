@@ -6,6 +6,7 @@ import { HowToPlay } from "../components/howToPlay/howToPlay"
 import { BayItemsList } from "../components/bayItems/bayList"
 import { TripForm } from "../components/recordOfTrips/addTrip"
 import { EditTripForm } from "../components/recordOfTrips/editTrip"
+import { RiversList } from "../components/riversAndStreams/riversAndStreams"
 
 
 // responsible for routing users to specific views depending on URL paths
@@ -20,6 +21,7 @@ export const ApplicationViews = ({ token, setToken }) => {
         <Route path="/">
         <Route path="/howtoplay" element={<HowToPlay setToken={setToken} />} />
         <Route path="/bayitems" element={<BayItemsList setToken={setToken} />} />
+        <Route path="/riversandstreams" element={<RiversList setToken={setToken} />} />
         <Route path="/recordoftrips">
         <Route path="/recordoftrips/new" element={<TripForm token={token} />} />
         <Route path="/recordoftrips/edit/:tripId" element={<EditTripForm token={token} />} />
