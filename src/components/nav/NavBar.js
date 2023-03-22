@@ -21,7 +21,7 @@ export const NavBar = ({toggle, setToggle, token, setToken}) => {
           </li>
       </ul>
       <ul 
-      className={`navbar2 ${toggle?"":"toggle"}`}
+      className={`navbar2 responsive ${toggle?"":"toggle"}`}
       onClick={()=>{setToggle(true)}}>
         {
         token ? (
