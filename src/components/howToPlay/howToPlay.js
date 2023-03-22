@@ -13,7 +13,7 @@ export const HowToPlay = () => {
                     <h1 className="bay--title">BAY GAME</h1>
 					<p className="tagline">The Official Chesapeake Bay Activity App for Fun From the Bridge to the Beach</p>
 					<p className="governor">Governor Wes Moore</p>
-                    <h5 className="credit">Adapted from the original 1997 Maryland Bay Game by Maegan Phan.</h5>
+                    <h5 className="credit">Adapted from the original 1997 Maryland Bay Game by <a href="http://www.linkedin.com/in/maeyoungphan">Maegan Phan</a></h5>
                     </div>
 					<div className="howToPlay">
 					<h2 className="playHeader">How To Play the Maryland Bay Game:</h2>

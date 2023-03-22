@@ -46,11 +46,14 @@
 }
 
 .bayItems--title {
+    margin-top: 1.5rem;
     margin-bottom: 0;
+    font-size: x-large;
 }
 
 .bayItems--subtitle {
     margin-bottom: 0;
+    font-size: large;
 }
 
 .trips--addbtn {
@@ -74,4 +77,67 @@
     display: flex;
     margin: 0 2rem 0 0;
     justify-content: flex-end;
+}
+
+.tripform--container {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trip--form {
+    text-align: left;
+    border: .2rem solid #242423;
+    border-radius: .5rem;
+    margin-top: 2rem;
+    background-color: #a3cef1;
+}
+
+.tripform--title {
+    font-size: x-large;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-left: 4.5rem;
+}
+
+.trip--field {
+    padding: .75rem 1rem;
+    font-weight: 600;
+}
+
+.control, .occasionList {
+    margin-top: .5rem;
+}
+
+.form--box, .occasionList {
+    border-radius: .5rem;
+}
+
+.create-trip {
+    margin: .5rem 8rem 2rem 8rem;
+}
+
+.editform--box {
+    width: 2.5rem;
+    border-radius: .25rem;
+    margin: 0;
+    font-size: small;
+}
+
+.editform--num {
+    width: 1.75rem;
+    border-radius: .25rem;
+    margin: 0;
+    font-size: small;
+}
+
+.edit--occasionList {
+    border-radius: .25rem;
+    margin: 0;
+    font-size: medium;
+}
+
+.icon {
+    font-size: large;
 }

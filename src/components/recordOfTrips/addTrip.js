@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { addNewTrip } from "../../managers/RecordOfTripsManager"
 import { getOccasions } from "../../managers/OccasionManager"
 
-
 export const TripForm = () => {
     const navigate = useNavigate()
     const [occasions, setOccasions] = useState([])
@@ -26,40 +25,47 @@ export const TripForm = () => {
     }
 
     return (
-        <form className="tripForm">
-            <h2 className="tripForm__title">Register New Trip</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="date">Date: </label>
-                    <input type="date" name="date" required autoFocus className="form-control"
+        <section className="tripform--container">
+        <form className="trip--form">
+            <h2 className="tripform--title">Record a New Trip</h2>
+
+                <div className="trip--field">
+                    <label className="label" htmlFor="date">Date: </label>
+                    <div className="control">
+                    <input type="date" name="date" required autoFocus className="form--box"
                         value={currentTrip.date}
                         onChange={changeTripState}
                     />
+                    </div>
                 </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name: </label>
-                    <input type="text" name="name" required autoFocus className="form-control"
+
+
+                <div className="trip--field">
+                    <label className="label" htmlFor="name">Name: </label>
+                    <div className="control">
+                    <input type="text" name="name" required autoFocus className="form--box"
                         value={currentTrip.name}
                         onChange={changeTripState}
                     />
+                    </div>
                 </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="number_found">Number of Scavenger Hunt Items Found: </label>
-                    <input type="text" name="number_found" required autoFocus className="form-control"
-                        defaultValue={currentTrip.number_found}
+
+                <div className="trip--field">
+                    <label className="label" htmlFor="number_found">Number of Scavenger Hunt Items Found: </label>
+                    <div className="control">
+                    <input type="number" name="number_found" required autoFocus className="form--box" min="0" max="24"
+                        defaultValue={currentTrip.number_found} 
                         onChange={(evt) => {const copy = {...currentTrip}
                         copy.number_found = parseInt(evt.target.value)
                         setCurrentTrip(copy)}}
                     />
+                    </div>
                 </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                <label htmlFor="occasion">Occasion:</label>
+
+                <div className="trip--field">
+                <div className="control">
+                <label className="label" htmlFor="occasion">Occasion:</label>
+                </div>
                     <select required autoFocus className="occasionList" value={currentTrip.occasion} onChange={(evt) => {const copy = {...currentTrip}
                     copy.occasion = parseInt(evt.target.value)
                     setCurrentTrip(copy)}}
@@ -67,7 +73,7 @@ export const TripForm = () => {
                         {occasions.map(occasion => {
                                 return <option
                                     name="occasion"
-                                    className="form-control"
+                                    className="form--box"
                                     value={occasion.id}
                                     key={`occasion--${occasion.id}`}
                                 >{occasion.emoji} {occasion.name}</option>
@@ -76,11 +82,10 @@ export const TripForm = () => {
                         }
                     </select>
                 </div>
-            </fieldset>
-
-            <button type="submit"
+                <div className="control">
+            <button className="button create-trip" type="submit"
                 onClick={evt => {
-                    // Prevent form from being submitted
+
                     evt.preventDefault()
 
                     const trip = {
@@ -90,11 +95,12 @@ export const TripForm = () => {
                         occasion: parseInt(currentTrip.occasion)
                     }
 
-                    // Send POST request to your API
                     addNewTrip(trip)
                         .then(() => navigate("/bayitems"))
                 }}
-                className="btn btn-primary">Create Trip</button>
+                >Create Trip</button>
+                </div>
         </form>
+    </section>
     )
 }

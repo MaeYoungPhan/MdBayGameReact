@@ -6,7 +6,7 @@ import bridge from "./images/BayBridge_postcard2.jpeg"
 import "./Login.css"
 
 export const Register = ({ setToken }) => {
-  //state variables representing the properties of the User Class
+
   const firstName = useRef()
   const lastName = useRef()
   const email = useRef()

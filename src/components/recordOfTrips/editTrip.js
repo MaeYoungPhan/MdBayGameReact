@@ -14,13 +14,13 @@ export const EditTripForm = () => {
         name: "",
         number_found: 0,
         occasion: {},
-        occasionId: 0 // set new property to store pk integer from occasion object returned from database
+        occasionId: 0
     })
 
     useEffect(() => {
         getOccasions().then(res => setOccasions(res))
         getSingleTrip(tripId).then(res => {
-            // get response from server then set value of key occasionId to pk int of game_type object
+            // get response from server then set value of key occasionId to pk int of occasion object
             res.occasionId = res.occasion.id
             setCurrentTrip(res)
         })
@@ -57,7 +57,7 @@ export const EditTripForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="number_found">Number of Scavenger Hunt Items Found: </label>
-                    <input type="text" name="number_found" required autoFocus className="form-control"
+                    <input type="number" name="number_found" min="0" max="24" required autoFocus className="form-control" 
                         value={currentTrip.number_found}
                         onChange={(evt) => {const copy = {...currentTrip}
                         copy.number_found = parseInt(evt.target.value)
