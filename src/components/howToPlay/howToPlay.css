@@ -1,0 +1,80 @@
+.welcome--container {
+    display: flex;
+    background-color: #FFFF10;
+}
+
+.coverPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.olBlue {
+    width: 28rem;
+    padding-top: 2rem;
+    margin: 0;
+}
+
+.md--title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin: 0;
+    color: #6096ba;
+    line-height: 1;
+}
+
+.bay--title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: .25rem;
+    color: #6096ba;
+    text-shadow: 4px 4px #ef382f;
+    line-height: 1;
+}
+
+.tagline {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: .3rem;
+    color: #274c77;
+    border: .2rem solid #ef382f;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin: 0;
+}
+
+.governor {
+    color: #274c77;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 1rem;
+    line-height: .5;
+}
+
+.credit {
+    text-align: center;
+    color: #274c77;
+    font-style: italic;
+    font-size: medium;
+    line-height: 1.25;
+    margin-top: 0;
+}
+
+.howToPlay {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-right: 2rem;
+    padding: 2rem;
+    align-items: center;
+    background-color: #f3f5f7;
+    border: .2rem #242423 solid;
+    border-radius: 2rem;
+    height: 80%;
+}

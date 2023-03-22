@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
-import { TripList } from "../recordOfTrips/tripList"
+import { TripEditList } from "../recordOfTrips/tripEditList"
 import "./bayItems.css" 
 import { getBayItems, findItem, resetItem } from "../../managers/BayItemsManager"
-import { Row, Col, Image, Button } from 'react-bootstrap';
 
 
 export const BayItemsList = () => {
@@ -31,7 +30,7 @@ export const BayItemsList = () => {
     return <>
         <section className="hunt">
         <section className="bayItems-page--header">
-        <div className="tripsList--container"><TripList/></div>
+        <div className="tripsList--container"><TripEditList/></div>
         <div className="bayItems-header--container">
             <h1 className="bayItems--title">Can you find these Chesapeake Bay Related Things?</h1>
             <h4 className="bayItems--subtitle">When you spot on on your trip, click 'Found it!'</h4>

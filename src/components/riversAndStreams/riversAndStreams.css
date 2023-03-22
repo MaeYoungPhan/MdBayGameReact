@@ -1,13 +1,13 @@
 .water {
     display: flex;
-    /* flex-basis: 40%; */
 }
 
 .rivers-page--header {
     display: flex;
     width: 35rem;
     flex-direction: column;
-    margin: 0 1rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .rivers--title {
@@ -18,8 +18,7 @@
 .map--container {
     display: flex;
     align-items: center;
-    margin-top: 4rem;
-    padding: 0 1rem;
+    padding: 6rem 1rem;
 }
 
 .rivers-page--container{
@@ -36,8 +35,12 @@
 }
 
 .map {
-    height: 55rem;
+    height: 50rem;
     margin: 0 1rem;
     border: .2rem #242423 solid;
     border-radius: 2rem;
+}
+
+.river--list {
+    line-height: 3rem;
 }
