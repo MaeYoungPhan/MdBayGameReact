@@ -82,7 +82,7 @@
 
 @media (max-width: 900px) {
   .menu-icon {
-    display: block;
+    display: block; 
     cursor: pointer;
   }
 
