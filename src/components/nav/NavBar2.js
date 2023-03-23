@@ -18,7 +18,11 @@ export const NavBar2 = ({token, setToken}) => {
         <img src={olBlueLogo} alt="Ol' Blue" className="navbar-logo" /> The Maryland Bay Game
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
+          {showNavbar?
+          <FaTimes />
+          :
           <FaBars />
+          }
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
