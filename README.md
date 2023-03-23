@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# The Maryland Bay Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*The Official Chesapeake Bay Activity App for Fun From the Bridge to the Beach*
 
-## Available Scripts
+## Application Overview
 
-In the project directory, you can run:
+Each year, thousands flock to Maryland’s eastern shore for vacation. The route from the Chesapeake Bay Bridge to the beach is scenic … and long. In the days before smartphones and tablets, the Maryland Bay Game, an activity book featuring games and trivia about the Chesapeake Bay watershed, was the answer to road trip boredom. The book was handed out at the toll booths, courtesy of the State of Maryland.
+The game lasted several years in the late 90’s and early 2000’s, before falling into oblivion. 
 
-### `npm start`
+## Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By re-creating key features of the original Maryland Bay Game, The Maryland Bay Game web application enables new generations of Maryland beach-goers to experience the fun and become lifelong protectors of one of America's most unique natural treasures.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The server is available [here](https://github.com/MaeYoungPhan/md-bay-game-server). This app was initially built in two weeks as a final project for my full-stack web dev program.
 
-### `npm test`
+### The Original Maryland Bay Game
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Adapting the Bay Game for web use for me has been recreating a memory. I hope 90’s kids, especially those who grew up in DelMarVa, will find it awesomely nostalgic. To sum it up, it’s a whole vibe. As such, I tried to stay true to the OG 1997 activity book as much as possible. Here are some excerpts from that booklet for reference. (This explanation is also a little bit so you’re not like, “WTF. Is this comic sans?!” when you clone this masterpiece.)
 
-### `npm run build`
+![Cover Page](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/BayGameCover.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Scavenger Hunt](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/ScavengerHunt.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Rivers and Streams](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/RiversStreams.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
+* Users can create profiles for each cat and colony in their care.
+* Users can update health information and notes about each cat, feeding times for colonies
+* Users can add cats to colonies or track them as individual cats.
+* Users can create daily journal entries for colonies to track feedings and cats present.
+* Users view cats and colonies on a map
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)!
+![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone git@github.com:MaeYoungPhan/MdBayGameReact.git
+```
+2. Access and clone the server [here](https://github.com/MaeYoungPhan/md-bay-game-server).
+4. Run the server using the debugger or in the terminal.
+3. Launch the client
+```bash
+npm install
+npm start
+```
+*Note: The client runs on localhost:3000 while the server runs on localhost:8000*
 
-## Learn More
+## Planning
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Wire Frame](https://miro.com/app/board/uXjVMf-viFw=/?share_link_id=976673193824)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[ERD](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/2023-MVP-BayGameERD.png)
 
-### Code Splitting
+![](https://github.com/MaeYoungPhan/cats-I-know/blob/main/CatsIKnow.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgements
 
-### Analyzing the Bundle Size
+📚 Jo, Becky, and the [Talbot County Free Library](http://www.tcfl.org/) for finding the original activity book. Libraries are the best. Please support them. ♥️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🐐 Coach Steve, Sydney Dickson, Dakota Lambert and my colleagues in Cohort 60 for being badass human beings and teaching us to be developers or whatever. 
 
-### Making a Progressive Web App
+## Adapted for Web By
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Maegan Phan](https://www.linkedin.com/in/maeyoungphan/)
