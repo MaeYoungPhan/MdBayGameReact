@@ -24,11 +24,10 @@ Adapting the Bay Game for web use for me has been recreating a memory. I hope 90
 ![Rivers and Streams](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/RiversStreams.JPG)
 
 ## Features
-* Users can create profiles for each cat and colony in their care.
-* Users can update health information and notes about each cat, feeding times for colonies
-* Users can add cats to colonies or track them as individual cats.
-* Users can create daily journal entries for colonies to track feedings and cats present.
-* Users view cats and colonies on a map
+
+* Users can view the Scavenger Hunt page where they can find bay-related items they see along Route 50. Images can be reset for future play.
+* Users can use checkboxes to mark-off Rivers and Streams they find along Route 50.
+* Users can keep a Record of Trips. They can view, edit, and delete past trips, and add a new trip record.
 
 ## Technologies Used
 
