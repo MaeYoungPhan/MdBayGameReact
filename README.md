@@ -65,6 +65,8 @@ npm start
 
 🥔 The Django Taters for the debugger, troubleshooting, and emotional support. I love you guys.
 
+🧙 [James Linkous](https://github.com/JLinkous15) for the original responsive nav bar that ultimately helped me find the best solution for this project. Check out his [Github](https://github.com/JLinkous15) for some true coding wizardry. 
+
 📚 Jo, Becky, and the [Talbot County Free Library](http://www.tcfl.org/) for finding the original activity book. Libraries are the best. Please support them. ♥️
 
 🐐 Coach Steve, Sydney Dickson, Dakota Lambert and my colleagues in Cohort 60 for being badass human beings and teaching us to be developers or whatever. 
