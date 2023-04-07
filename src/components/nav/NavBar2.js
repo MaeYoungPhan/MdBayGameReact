@@ -17,18 +17,24 @@ export const NavBar2 = ({token, setToken}) => {
         <div className="navbar-header">
         <img src={olBlueLogo} alt="Ol' Blue" className="navbar-logo" /> The Maryland Bay Game
         </div>
+        {
+        token ? ( <>
         <div className="menu-icon" onClick={handleShowNavbar}>
-          {showNavbar?
+          {showNavbar ?
           <FaTimes />
           :
           <FaBars />
           }
         </div>
+        </>
+        ) : (
+          ""
+        )
+        }
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
-          <ul>
-          {
-        token ? (
-          <>
+        <ul>
+        {
+        token ? ( <>
             <li className="navbar-listitem how">
             <Link to="/howtoplay" className="navbar2-links">
             How To Play </Link>
@@ -47,16 +53,9 @@ export const NavBar2 = ({token, setToken}) => {
                         Logout
                     </Link>
                 </li>
-                </>
-        ) : (
-            <>
-                <li className="navbar-listitem">
-                    <Link to="/register" className="button">
-                            Register</Link></li>
-                <li className="navbar-listitem">
-                    <Link to="/login" className="button">Login </Link>
-                </li>
             </>
+        ) : (
+          ""
         )
       }
           </ul>

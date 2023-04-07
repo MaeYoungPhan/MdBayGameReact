@@ -64,7 +64,7 @@ export const TripEditList = (props) => {
     const onSave = (id, updatedtrip) => {
         editTrip(id, updatedtrip)
             .then(json => {
-                // reset inEditMode and unit price state values
+                // reset inEditMode and trip state values
                 onCancel();
 
                 // fetch the updated data
