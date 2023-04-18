@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import illustration from "./images/RiversAndStreams.png"
 import deMap from "./images/De-Map.png"
+import { Map } from "./Map"
 import "./riversAndStreams.css" 
 import { getRiverStream } from "../../managers/RiversStreamsManager"
 
@@ -49,7 +50,8 @@ export const RiversList = () => {
             }</div>
         </article>
         </section>
-        <section className="map--container"><img className="map" src={deMap}/></section>
+        {/* <section className="map--container"><img className="map" src={deMap}/></section> */}
+        <section className="leaflet-container"><Map/></section>
         </section>
     </>
 
