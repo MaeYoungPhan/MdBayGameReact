@@ -57,9 +57,9 @@ npm start
 
 [Wire Frame](https://miro.com/app/board/uXjVMf-viFw=/?share_link_id=976673193824)
 
-[ERD](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/2023-MVP-BayGameERD.png)
+[ERD](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/MD%20Bay%20Game%20(MVP).png)
 
-![](https://github.com/MaeYoungPhan/cats-I-know/blob/main/CatsIKnow.png)
+![](https://github.com/MaeYoungPhan/MdBayGameReact/blob/main/MD%20Bay%20Game%20(MVP).png)
 
 ## Acknowledgements
 
